@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%), linear-gradient(121.28deg, #669600 0%, #ff0000 100%), linear-gradient(360deg, #0029ff 0%, #8fff00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%), radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-repeat: no-repeat;
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c1c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #828282;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    height: 600px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#name {
+    position: relative;
+    width: 100%;
+    padding: 7px 7px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: transparent;
+    transition: all .2s linear;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+}
+
+.add {
+    margin-left: 8px;
+    padding: 10px;
+    border: none;
+    background-color: #54b4d3;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    height: 490px;
+}
+
+.cards button {
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.removeBtn {
+    transition: .5s ease;
+}
+
+.removeBtn:hover {
+    transform: scale(1.2);
+}
+
+.removeBtn:active {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.wrapperToDo {
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.wrapperToDo input {
+    margin-left: 15px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.confirmEditBtn {
+    display: none;
+}
+
+.confirmEditBtn.active {
+    display: block;
+}
+
+.editBtn {
+    display: block;
+}
+
+.editBtn.active {
+    display: none;
+}
+
+.toDoList {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.outline {
+    outline: none;
+}
+
+.inpCheck {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    accent-color: black;
+}
+
+.text-dec {
+    text-decoration: line-through;
+}
+
+.none {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    #name {
+        font-size: 14px;
+    }
+    .wrapperToDo input {
+        font-size: 13px;
+    }
+    .add {
+        font-size: 11px;
+    }
+}
